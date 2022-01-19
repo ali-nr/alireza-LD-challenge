@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center',
+
     flexGrow: 1,
   },
   image: {minHeight: 500, flexGrow: 1},

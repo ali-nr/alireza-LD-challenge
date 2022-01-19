@@ -51,5 +51,6 @@ const styles = StyleSheet.create({
     maxHeight: 35,
     flexWrap: 'nowrap',
     paddingHorizontal: 10,
+    paddingTop: 10,
   },
 });

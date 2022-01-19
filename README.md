@@ -24,7 +24,7 @@ React native challenge building a Prince's Theatre app.
 ## Codebase
 
 - Codebase follows Components and Screens structure where Components can be used within screens or other components and Screen are responsible for all functionalities that are specific to the application screen that user is interacting with
-- React-Query alongside axios libraries are used to handle Api calls and to gracefully handle flakiness of the apis where user can still see the film information even if the api fails as React-Query will retry calls and cache data.
+- React-Query alongside axios libraries are used to handle Api calls and to gracefully handle flakiness as by default react-query tries 3 times and can be customized further. Furthermore the request is made only when needed (eg. app is not in the background)
 - Tests for some components and screens are written within the respective Component or Screen folders
 - Responsive UI
 
@@ -32,3 +32,5 @@ React native challenge building a Prince's Theatre app.
 
 - More UI responsiveness
 - Mock and intercept API calls for the screen using React-Query and Axios
+- Improve messaging and logging in regards to API failures
+- Improve the data sent from the API (eg.use IDs to match films)

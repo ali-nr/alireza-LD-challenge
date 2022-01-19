@@ -13,6 +13,7 @@ export type MoviesData = {
   }>;
 };
 
+// need to better handle this rather than putting keys here in project
 const key = 'Yr2636E6BTD3UCdleMkf7UEdqKnd9n361TQL9An7';
 
 export async function fetchCinemaWorld(): Promise<MoviesData> {

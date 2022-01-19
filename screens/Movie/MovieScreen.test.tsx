@@ -6,7 +6,7 @@ import {MovieScreen} from './MovieScreen';
 describe('MovieScreen', () => {
   it('Renders single movie screen ', () => {
     const {queryByText} = render(
-      // linting complains about some navigation and route props are missing but we don't need tp provide for testing
+      // linting complains about some navigation and route props are missing but we don't need to provide for testing
       <NavigationContainer>
         <MovieScreen
           navigation={{setOptions: jest.fn()}}

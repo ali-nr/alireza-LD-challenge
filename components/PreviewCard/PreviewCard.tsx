@@ -1,6 +1,6 @@
 import React, {FunctionComponent} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Card, Text} from 'react-native-paper';
+import {Card, Subheading, Text} from 'react-native-paper';
 import {PriceInfo} from '../PriceInfo/PriceInfo';
 
 type Props = {
@@ -21,7 +21,6 @@ export const PreviewCard: FunctionComponent<Props> = props => {
           <View style={styles.cardContentText}>
             <Text>{movieTitle}</Text>
           </View>
-
           <PriceInfo
             filmWorldPrice={filmWorldPrice}
             cinemaWorldPrice={cinemaWorldPrice}
@@ -45,10 +44,11 @@ const styles = StyleSheet.create({
   cardImage: {maxHeight: 150},
   cardContent: {
     flexGrow: 1,
+    width: '100%',
   },
   cardContentText: {
-    maxHeight: 35,
-    flexWrap: 'nowrap',
+    width: '100%',
+    maxHeight: 50,
     paddingHorizontal: 10,
     paddingTop: 10,
   },

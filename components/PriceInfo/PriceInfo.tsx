@@ -28,8 +28,8 @@ export const PriceInfo: FunctionComponent<Props> = props => {
 
 const styles = StyleSheet.create({
   priceInfo: {
-    width: '100%',
     justifyContent: 'flex-end',
     flexGrow: 1,
+    flexWrap: 'nowrap',
   },
 });

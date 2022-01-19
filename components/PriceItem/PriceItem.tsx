@@ -13,7 +13,9 @@ export const PriceItem: FunctionComponent<Props> = props => {
   return (
     <View style={[styles.priceItem, {backgroundColor}]}>
       <Caption>{sourceTitle}</Caption>
-      <Caption>{price !== undefined ? `$${price}` : 'N/A'}</Caption>
+      <Caption style={styles.price}>
+        {price !== undefined ? `$${price}` : 'N/A'}
+      </Caption>
     </View>
   );
 };
@@ -23,6 +25,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '100%',
+    height: 30,
     paddingHorizontal: 10,
+    flexWrap: 'nowrap',
   },
+  price: {width: 40},
 });

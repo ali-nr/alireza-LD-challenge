@@ -19,7 +19,7 @@ export const PreviewCard: FunctionComponent<Props> = props => {
         <Card.Cover style={styles.cardImage} source={{uri: imageUrl}} />
         <View style={styles.cardContent}>
           <View style={styles.cardContentText}>
-            <Text>{movieTitle}</Text>
+            <Text>{movieTitle.substring(0, 40)}...</Text>
           </View>
           <PriceInfo
             filmWorldPrice={filmWorldPrice}
@@ -45,11 +45,14 @@ const styles = StyleSheet.create({
   cardContent: {
     flexGrow: 1,
     width: '100%',
+
   },
   cardContentText: {
     width: '100%',
     maxHeight: 50,
     paddingHorizontal: 10,
     paddingTop: 10,
+    overflow: 'hidden',
+
   },
 });

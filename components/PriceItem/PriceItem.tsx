@@ -24,10 +24,10 @@ const styles = StyleSheet.create({
   priceItem: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems:'center',
     width: '100%',
     height: 30,
     paddingHorizontal: 10,
-    flexWrap: 'nowrap',
   },
-  price: {width: 40},
+  price: {width: 40, height:20},
 });

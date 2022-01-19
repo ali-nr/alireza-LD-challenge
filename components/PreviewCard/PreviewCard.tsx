@@ -35,7 +35,6 @@ export const PreviewCard: FunctionComponent<Props> = props => {
 const styles = StyleSheet.create({
   card: {
     width: 160,
-    height: 270,
     marginBottom: 20,
     padding: 0,
   },

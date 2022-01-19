@@ -31,4 +31,4 @@ React native challenge building a Prince's Theatre app.
 ## Improving the code
 
 - More UI responsiveness
-- Mock and intercept API calls to test out the
+- Mock and intercept API calls for the screen using React-Query and Axios

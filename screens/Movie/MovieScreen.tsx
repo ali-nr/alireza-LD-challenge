@@ -10,7 +10,6 @@ type Props = NativeStackScreenProps<RootStackParamList, 'MovieScreen'>;
 export const MovieScreen: FunctionComponent<Props> = props => {
   const {poster, title, cinemaWorldPrice, filmWorldPrice, actors} =
     props.route.params.movie;
-  console.log(props.route.params.movie);
 
   useEffect(() => {
     props.navigation.setOptions({headerTitle: title});

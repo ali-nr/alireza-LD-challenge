@@ -1,4 +1,5 @@
 import axios from 'axios';
+import {useQuery} from 'react-query';
 
 export type MoviesData = {
   Provider: string;
@@ -17,7 +18,7 @@ const key = 'Yr2636E6BTD3UCdleMkf7UEdqKnd9n361TQL9An7';
 export async function fetchCinemaWorld(): Promise<MoviesData> {
   setTimeout(() => {}, 3000);
   const {data} = await axios.get<MoviesData>(
-    'https://challenge.lexicondigital.com.au/api/v2/cinemaworld/movie',
+    'https://challenge.lexicondigital.com.au/api/v2/cinemaworld/movies',
     {
       headers: {
         'x-api-key': key,
@@ -25,6 +26,10 @@ export async function fetchCinemaWorld(): Promise<MoviesData> {
     },
   );
   return data;
+}
+
+export function useFetchCinemaWorldQuery() {
+  return useQuery<MoviesData, Error>('fetchCinemaWorld', fetchCinemaWorld);
 }
 
 export async function fetchFilmWorld(): Promise<MoviesData> {
@@ -37,4 +42,8 @@ export async function fetchFilmWorld(): Promise<MoviesData> {
     },
   );
   return data;
+}
+
+export function useFetchFilmWorldQuery() {
+  return useQuery<MoviesData, Error>('fetchFilmWorld', fetchFilmWorld);
 }

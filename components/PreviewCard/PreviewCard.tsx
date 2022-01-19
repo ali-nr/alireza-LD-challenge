@@ -1,20 +1,18 @@
 import React, {FunctionComponent} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Card, Text} from 'react-native-paper';
-import {priceBackground} from '../../helpers/MoviesHelper';
 import {PriceInfo} from '../PriceInfo/PriceInfo';
 
 type Props = {
   movieTitle: string;
   imageUrl: string;
-  cinemaWorldPrice: number;
-  filmWorldPrice: number;
+  cinemaWorldPrice?: number;
+  filmWorldPrice?: number;
 };
 
 export const PreviewCard: FunctionComponent<Props> = props => {
   const {filmWorldPrice, cinemaWorldPrice, imageUrl, movieTitle} = props;
 
-  console.log(priceBackground(cinemaWorldPrice, filmWorldPrice));
   return (
     <Card style={styles.card} elevation={2}>
       <View style={styles.cardView}>
@@ -23,6 +21,7 @@ export const PreviewCard: FunctionComponent<Props> = props => {
           <View style={styles.cardContentText}>
             <Text>{movieTitle}</Text>
           </View>
+
           <PriceInfo
             filmWorldPrice={filmWorldPrice}
             cinemaWorldPrice={cinemaWorldPrice}

@@ -56,7 +56,6 @@ export const MoviesScreen: FunctionComponent<Props> = props => {
   //     filmWorldError?.message,
   //   );
   // }, [filmWorldIsError, cinemaWorldIsError, cinemaWorldError, filmWorldError]);
-  console.log(filmWorldData, cinemaWorldData);
 
   function navigateToMovie(movie: Movie) {
     navigation.navigate('MovieScreen', {movie});

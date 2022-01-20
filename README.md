@@ -33,7 +33,7 @@ React native challenge building a Prince's Theatre app.
 
 - More UI responsiveness
 - Mock and intercept API calls for the screen using React-Query and Axios
-- Improve messaging and logging in regards to API failures
+- Add good messaging and logging in regards to API failures
 - Improve the data sent from the API (eg.use IDs to match films)
 - Not including keys in the repository
 - Some assumptions made throughout the app indicated with comments which in a real scenario would be clarified with the corresponding team/s

@@ -37,7 +37,7 @@ export const MoviesScreen: FunctionComponent<Props> = props => {
   const {
     data: filmWorldData,
     error: filmWorldError,
-    isError: filmWorldIsError,
+    //isError: filmWorldIsError, could be used for logging alongside error variable
     isLoading: filmWorldIsLoading,
   } = useQuery<MoviesData, Error>('fetchFilmWorld', fetchFilmWorld, {
     retry: MAX_RETRY
@@ -45,7 +45,7 @@ export const MoviesScreen: FunctionComponent<Props> = props => {
   const {
     data: cinemaWorldData,
     error: cinemaWorldError,
-    isError: cinemaWorldIsError,
+    //isError: cinemaWorldIsError, could be used for logging alongside error variable
     isLoading: cinemaWorldIsLoading,
   } = useQuery<MoviesData, Error>('fetchCinemaWorld', fetchCinemaWorld,{
     retry: MAX_RETRY

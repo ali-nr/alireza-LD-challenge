@@ -19,7 +19,7 @@ export const PreviewCard: FunctionComponent<Props> = props => {
         <Card.Cover style={styles.cardImage} source={{uri: imageUrl}} />
         <View style={styles.cardContent}>
           <View style={styles.cardContentText}>
-            <Text>{movieTitle.substring(0, 40)}...</Text>
+            <Text>{movieTitle.substring(0, 40)}</Text>
           </View>
           <PriceInfo
             filmWorldPrice={filmWorldPrice}

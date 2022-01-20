@@ -1,4 +1,4 @@
-import {cinemaWorldData, filmWorldData} from '../TestData';
+import {cinemaWorldData, filmWorldData} from '../jest/TestData';
 import {movies, priceBackground} from './MoviesHelper';
 
 describe('MoviesHelper', () => {

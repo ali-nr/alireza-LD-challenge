@@ -1,5 +1,4 @@
 import axios from 'axios';
-import {useQuery} from 'react-query';
 
 export type MoviesData = {
   Provider: string;

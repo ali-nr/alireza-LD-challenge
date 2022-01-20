@@ -19,7 +19,8 @@ export function movies(
 ): Movie[] | undefined {
   return filmWorldData?.Movies.map(filmWorldMovie => {
     const cinemaWorldMovies = cinemaWorldData?.Movies.find(cinemaWorldMovie => {
-      // Needs improvements on probably check with IDs and not title 
+      // Needs improvements, better to check with IDs rather than title but in this 
+      // case IIDs were different 
       return cinemaWorldMovie.Title === filmWorldMovie.Title;
     });
 

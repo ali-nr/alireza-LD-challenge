@@ -32,19 +32,24 @@ export const MoviesScreen: FunctionComponent<Props> = props => {
     backgroundColor: isDarkMode ? RNColors.darker : RNColors.lighter,
   };
 
-  // by default makes three calls because of flakiness. Can be customized.
+  // setting a maximum retry of 5 in case of api failing 
+  const MAX_RETRY = 5;
   const {
     data: filmWorldData,
     error: filmWorldError,
     isError: filmWorldIsError,
     isLoading: filmWorldIsLoading,
-  } = useQuery<MoviesData, Error>('fetchFilmWorld', fetchFilmWorld);
+  } = useQuery<MoviesData, Error>('fetchFilmWorld', fetchFilmWorld, {
+    retry: MAX_RETRY
+  });
   const {
     data: cinemaWorldData,
     error: cinemaWorldError,
     isError: cinemaWorldIsError,
     isLoading: cinemaWorldIsLoading,
-  } = useQuery<MoviesData, Error>('fetchCinemaWorld', fetchCinemaWorld);
+  } = useQuery<MoviesData, Error>('fetchCinemaWorld', fetchCinemaWorld,{
+    retry: MAX_RETRY
+  });
 
   // useEffect(() => {
   //   // here we can report to a logging system so that we are notified of the problem

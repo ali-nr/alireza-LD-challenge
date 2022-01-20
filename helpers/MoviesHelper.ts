@@ -10,12 +10,16 @@ export type Movie = {
   cinemaWorldPrice?: number;
   filmWorldPrice?: number;
 };
+
+// Assumption here is that both APIs return the same exact list of films. 
+// Otherwise this function needs improvement 
 export function movies(
   filmWorldData: MoviesData | undefined,
   cinemaWorldData: MoviesData | undefined,
 ): Movie[] | undefined {
   return filmWorldData?.Movies.map(filmWorldMovie => {
     const cinemaWorldMovies = cinemaWorldData?.Movies.find(cinemaWorldMovie => {
+      // Needs improvements on probably check with IDs and not title 
       return cinemaWorldMovie.Title === filmWorldMovie.Title;
     });
 

@@ -6,8 +6,9 @@ React native challenge building a Prince's Theatre app.
 
 - Install node listed in `.nvm`
 - Install android studio
-- Install java
+- Install java. Might need to install JDK 11 if facing build issues
 - Install xcode
+- Make sure you follow [React Native Development Setup](https://reactnative.dev/docs/environment-setup)
 
 ## Project setup
 
@@ -28,9 +29,11 @@ React native challenge building a Prince's Theatre app.
 - Tests for some components and screens are written within the respective Component or Screen folders
 - Responsive UI
 
-## Improving the code
+## Improving the project
 
 - More UI responsiveness
 - Mock and intercept API calls for the screen using React-Query and Axios
 - Improve messaging and logging in regards to API failures
 - Improve the data sent from the API (eg.use IDs to match films)
+- Not including keys in the repository
+- Some assumptions made throughout the app indicated with comments which in a real scenario would be clarified with the corresponding team/s
